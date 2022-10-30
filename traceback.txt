@@ -1,0 +1,41 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script1.rpy", line 83, in script
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "game/script1.rpy", line 83, in script
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "game/script1.rpy", line 83, in <module>
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "game/7dots.rpy", line 311, in Ani
+    for i in range(start, start + frames):
+TypeError: 'float' object cannot be interpreted as an integer
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "E:\Rem Pau\renpy-8.0.1-sdk\renpy\bootstrap.py", line 274, in bootstrap
+    renpy.main.main()
+  File "E:\Rem Pau\renpy-8.0.1-sdk\renpy\main.py", line 558, in main
+    renpy.game.context().run(node)
+  File "game/script1.rpy", line 83, in script
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "game/script1.rpy", line 83, in script
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "E:\Rem Pau\renpy-8.0.1-sdk\renpy\ast.py", line 1230, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "E:\Rem Pau\renpy-8.0.1-sdk\renpy\python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script1.rpy", line 83, in <module>
+    image light ani = Ani("lightning ", 0.5, .05, True, True)
+  File "game/7dots.rpy", line 311, in Ani
+    for i in range(start, start + frames):
+  File "E:\Rem Pau\renpy-8.0.1-sdk\renpy\revertable.py", line 277, in revertable_range
+    return RevertableList(range(*args))
+TypeError: 'float' object cannot be interpreted as an integer
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.0.1.22070801
+Singing of the Phoenix 0.2.1
+Sat Oct 29 22:07:12 2022
