@@ -33,7 +33,7 @@ define gui.idle_color = '#aaaaaa'
 define gui.idle_small_color = '#888888'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#990000'
+define gui.hover_color = '#FFFFFF'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -41,7 +41,7 @@ define gui.hover_color = '#990000'
 define gui.selected_color = '#555555'
 
 ## Цвет, используемый текстовой кнопкой, когда она не может быть выбрана.
-define gui.insensitive_color = '#aaaaaa7f'
+define gui.insensitive_color = '#A9A9A9'
 
 ## Цвета, используемые для частей панелей, которые не заполняются. Они
 ## используются не напрямую, а только при воссоздании файлов изображений.
@@ -49,7 +49,7 @@ define gui.muted_color = '#c16666'
 define gui.hover_muted_color = '#d69999'
 
 ## Цвета, используемые в тексте диалогов и выборов.
-define gui.text_color = '#404040'
+define gui.text_color = '#FFFFFF'
 define gui.interface_text_color = '#404040'
 
 
@@ -340,7 +340,7 @@ define gui.unscrollable = "hide"
 ## Экран истории показывает диалог, который игрок уже прошёл.
 
 ## Количество диалоговых блоков истории, которые Ren'Py будет хранить.
-define config.history_length = 250
+define config.history_length = 50
 
 ## Высота доступных записей на экране истории, или None, чтобы задать высоту в
 ## зависимости от производительности.

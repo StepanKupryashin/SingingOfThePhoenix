@@ -351,6 +351,8 @@ style navigation_button_text:
 init python:
     renpy.music.register_channel("test_1", "sfx", False)
     renpy.music.register_channel("test_2", "sfx", False)
+    renpy.music.register_channel("test_3", "sfx", False)
+
 # Создаёт отдельный канал. Это сделано для того чтобы предыдущий звук не прерывался при воспроизведении нового.
 
 screen main_menu():
@@ -362,13 +364,13 @@ screen main_menu():
         idle "gui/main_menu_knopci_off.png"
         hover "gui/main_menu_knopci_on.png"
 
-        hotspot(15,98,227,72) action [Play("test_2","knopka1.mp3"), Start ()] hovered Play("test_1","knopka2.mp3")
-        hotspot(21,179,297,69) action [Play("test_2","knopka1.mp3"), ShowMenu ("load")] hovered Play("test_1","knopka2.mp3")
-        hotspot(24,247,305,76) action [Play("test_2","knopka1.mp3"), ShowMenu ("preferences")] hovered Play("test_1","knopka2.mp3")
-        ## hotspot(21,320,225,76) action [Play("test_2","knopka1.mp3"), Start ()] hovered Play("test_1","knopka2.mp3")
-        hotspot(21,393,218,74) action [Play("test_2","knopka1.mp3"), ShowMenu ("about")] hovered Play("test_1","knopka2.mp3")
-        hotspot(14,635,188,77) action [Play("test_2","knopka1.mp3"), Quit (confirm=None)] hovered Play("test_1","knopka2.mp3")
-        hotspot(1049,640,208,77) action [Play("test_2","knopka1.mp3"), ShowMenu ("help")] hovered Play("test_1","knopka2.mp3")
+        hotspot(15,98,227,72) action [Play("test_2","knopka1.mp3"), Start ()] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(21,179,297,69) action [Play("test_2","knopka1.mp3"), ShowMenu ("load")] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(24,247,305,76) action [Play("test_2","knopka1.mp3"), ShowMenu ("preferences")] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(21,320,225,76) action [Play("test_2","knopka1.mp3"), Start ()] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(21,393,218,74) action [Play("test_2","knopka1.mp3"), ShowMenu ("about")] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ]  unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(14,635,188,77) action [Play("test_2","knopka1.mp3"), Quit (confirm=None)] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
+        hotspot(1049,640,208,77) action [Play("test_2","knopka1.mp3"), ShowMenu ("help")] hovered [Play("test_1","knopka2.mp3"), SetVariable("default_mouse", "bring") ] unhovered [Play("test_3","knopka2.mp3"), SetVariable("default_mouse", "default")]
 
 
 
